@@ -1,19 +1,21 @@
-
-<table border=\"1\">
-    
-    for (%i = 0; $i <= $size; $i++)
+<?php 
+echo $_GET['size']
+<table border='1'>
+    for ($i=0; $i <= $_GET; $i++)
     {
-        <tr> 
-        for ($j = 0; $j <= $size; $j++)
+        echo "<tr><td>$i</td>";
+        for ($j = 1; $j <= $_GET; $j++)
         {
-            if ($i == 0 && $j == 0) {<td></td>}
-            else if ($i == 0) {<td>$j</td>}
-            else if ($j == 0) {<td>$i</td>}
-            else
+            if ($i == 0)
             {
-                <td> echo $i * $j </td>
+                echo "<td>$j</td>";
+                continue;
             }
+            $temptot = $i * $j;
+            echo "<td>$empttot</td>";
         }
-        </tr>
+        echo "</tr>";
     }
-</table>
+    echo "</tr>";
+    </table>
+?>
